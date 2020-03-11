@@ -3,4 +3,11 @@ kind: Repo
 metadata:
   name: repo
 spec:
-  version: 1.0.0
+  # clusterName is required and must be unique among all managed clusters
+  clusterName: draylab01
+  version: "1.0.0"
+  git:
+    syncRepo: git@github.com:dray01/acm-test.git
+    syncBranch: 1.0.0
+    secretType: ssh
+    policyDir: "ACM-policy"
